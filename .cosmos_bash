@@ -1,0 +1,16 @@
+export PATH="/Users/barrop02/Workspace/galileo:$PATH"
+
+# Cosmos login Aliases
+
+cl(){
+  cosmos-ssh.rb -c $1 -e $2
+}
+
+# Cosmos login Aliases
+alias cint="cl castaway-webapp int"
+alias ctest="cl castaway-webapp test"
+alias clive="cl castaway-webapp live"
+
+alias issh='cosmos-ssh.rb -e int -c'
+alias tssh='cosmos-ssh.rb -e test -c'
+alias lssh='cosmos-ssh.rb -e live -c'
