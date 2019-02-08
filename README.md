@@ -7,7 +7,7 @@ all the config files are in .profile_config and will need copying in to the home
 ```bash
 mkdir $HOME/.profile_config
 
-cp .profile_config/* $HOME/.profile_config
+cp .profile_config/.* $HOME/.profile_config
 cp .zshrc $HOME/.zshrc
 
 init
