@@ -11,7 +11,7 @@ export JAVA_PROXY_OPTS="-Dhttp.useProxy=true
 -Dhttps.nonProxyHosts=localhost|pal.sandbox.dev.bbc.co.uk"
 
 # Java configuration
-export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=/Users/barrop02/workspace/client.p12
+export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=$HOME/workspace/client.p12
   -Djavax.net.ssl.keyStorePassword=client
   -Djavax.net.ssl.keyStoreType=PKCS12
   -Djavax.net.ssl.trustStore=$CERTS_LOCATION/jssecacerts
