@@ -14,19 +14,19 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/bin:/Users/barrop02/Workspace/galileo:$PATH"
 
-source ~/profile_config/.certconf
-source ~/profile_config/.proxyconf
-source ~/profile_config/.optimo
-source ~/profile_config/.optimo-e2e
-source ~/profile_config/.java_bash
-source ~/profile_config/.castaway
-source ~/profile_config/.cosmos_bash
-source ~/profile_config/.vagrant_bash
-source ~/profile_config/.bashtools
-source ~/profile_config/.aws_bash
-source ~/profile_config/.git_bash
+source ~/.profile_config/.certconf
+source ~/.profile_config/.proxyconf
+source ~/.profile_config/.optimo
+source ~/.profile_config/.optimo-e2e
+source ~/.profile_config/.java_bash
+source ~/.profile_config/.castaway
+source ~/.profile_config/.cosmos_bash
+source ~/.profile_config/.vagrant_bash
+source ~/.profile_config/.bashtools
+source ~/.profile_config/.aws_bash
+source ~/.profile_config/.git_bash
+source ~./profile_config/.nvm-bash
 source ~/.profile # this is RVM
-source ~/profile_config/.nvm-bash
 
 alias cd..="cd .."
 alias init=". ~/.zshrc && echo 'bash profile re-initialised'"
