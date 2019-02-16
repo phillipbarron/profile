@@ -1,4 +1,4 @@
-export PATH="/Users/barrop02/Workspace/galileo:$PATH"
+export PATH="$HOME/workspace/galileo:$PATH"
 
 # Cosmos login Aliases
 
