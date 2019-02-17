@@ -12,6 +12,3 @@ cp .zshrc $HOME/.zshrc
 
 init
 ```
-### todos
-
- eposrt the `~/.profile_config/` as a var

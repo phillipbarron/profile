@@ -13,20 +13,21 @@ export PATH="$PATH:/usr/local/sbin:/gems/ruby-2.2.1/bin:/Users/barrop02/.rvm/gem
 source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/bin:/Users/barrop02/Workspace/galileo:$PATH"
+export $BASH_CONFIG_DIR="$HOME/.profile_config"
 
-source ~/.profile_config/.certconf
-source ~/.profile_config/.proxyconf
-source ~/.profile_config/.optimo
-source ~/.profile_config/.optimo-e2e
-source ~/.profile_config/.java_bash
-source ~/.profile_config/.castaway
-source ~/.profile_config/.cosmos_bash
-source ~/.profile_config/.vagrant_bash
-source ~/.profile_config/.bashtools
-source ~/.profile_config/.aws_bash
-source ~/.profile_config/.git_bash
-source ~./profile_config/.nvm-bash
-source ~/.profile # this is RVM
+. $BASH_CONFIG_DIR/.certconf
+. $BASH_CONFIG_DIR/.proxyconf
+. $BASH_CONFIG_DIR/.optimo
+. $BASH_CONFIG_DIR/.optimo-e2e
+. $BASH_CONFIG_DIR/.java_bash
+. $BASH_CONFIG_DIR/.castaway
+. $BASH_CONFIG_DIR/.cosmos_bash
+. $BASH_CONFIG_DIR/.vagrant_bash
+. $BASH_CONFIG_DIR/.bashtools
+. $BASH_CONFIG_DIR/.aws_bash
+. $BASH_CONFIG_DIR/.git_bash
+. $BASH_CONFIG_DIR/.nvm-bash
+. ~/.profile # this is RVM
 
 alias cd..="cd .."
 alias init=". ~/.zshrc && echo 'bash profile re-initialised'"
