@@ -1,3 +1,5 @@
+#!/bin/sh -e
+
 s3cp(){
         if [ "$3" == "live" ] ; then
                 BUCKET='live-galileo-interface-mt-resources-inputbucket-5nfo4tjd8049'
@@ -15,4 +17,8 @@ s3cp(){
         aws s3 cp s3://$BUCKET/$1 $2 --profile $PROFILE
 }
 
+# CPS_DEV
 export AWS_ACCOUNT_NUMBER=169163488685
+
+alias aws:clear="unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY"
+alias aws:env="env | grep AWS
