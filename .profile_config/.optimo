@@ -10,4 +10,4 @@ export AWS_DEFAULT_REGION=eu-west-1
 export ENVIRONMENT=dev
 
 export FEATURE_TOGGLES='{"disableCropTools": false, "disableEditPublished": true, "disablePublishType": false, "disableSettingsTab": false, "disableWithdraw": false, "disableDelete": false, "disableConfirmUnsavedChanges": false, "disableLanguage": false }'
-alias optimo="cd $HOME/workspace/optiom && npm run start:dev"
+alias optimo="cd $HOME/workspace/optimo && npm run start:dev"
