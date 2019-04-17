@@ -11,4 +11,4 @@ alias g:remote="git fetch origin && git reset --hard origin/master"
 # reguired for GPG
 export GPG_TTY=$(tty)
 export GITHUB_ACCESS_TOKEN=
-alias g:help="echo \"\ng:s: git status\ng:d: git diff\ng:f: git fetch\""
+alias g:help="echo \"\ng:s: git status\ng:d: git diff\ng:f: git fetch\ng:pom: git pull origin master\""
