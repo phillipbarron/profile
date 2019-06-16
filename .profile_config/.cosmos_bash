@@ -14,3 +14,12 @@ alias clive="cl castaway-webapp live"
 alias issh='cosmos-ssh.rb -e int -c'
 alias tssh='cosmos-ssh.rb -e test -c'
 alias lssh='cosmos-ssh.rb -e live -c'
+
+pythonLogin(){
+  $HOME/workspace/cosmos-tooling/cosmos.py $2 $1
+}
+
+alias cssh='$HOME/workspace/cosmos-tooling/cosmos.py'
+alias issh='pythonLogin $1 int'
+alias tssh='pythonLogin $1 test'
+alias lssh='pythonLogin $1 live'
