@@ -12,3 +12,7 @@ cp .zshrc $HOME/.zshrc
 
 init
 ```
+
+### todo
+
+* create a variables file for all the secret stuff an reference throughout
