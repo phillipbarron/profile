@@ -16,3 +16,4 @@ init
 ### todo
 
 * create a variables file for all the secret stuff an reference throughout
+• integrate is [profile stuff](https://github.com/phillipbarron/dev-env)
