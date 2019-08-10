@@ -13,7 +13,7 @@ export PATH="$PATH:/usr/local/sbin:/gems/ruby-2.2.1/bin:/Users/barrop02/.rvm/gem
 source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/bin:/Users/barrop02/Workspace/galileo:$PATH"
-export $BASH_CONFIG_DIR="$HOME/.profile_config"
+export BASH_CONFIG_DIR="$HOME/.profile_config"
 
 . $BASH_CONFIG_DIR/.certconf
 . $BASH_CONFIG_DIR/.proxyconf
