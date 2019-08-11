@@ -1,3 +1,5 @@
+#!/bin/sh -e
+
 alias v:ssh="vagrant ssh"
 alias v:up="vagrant up"
 alias v:halt="vagrant halt"
