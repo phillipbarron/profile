@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-export ZSH=/Users/barrop02/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="pygmalion"
 
@@ -8,11 +8,11 @@ plugins=(git)
 
 # User configuration
 
-export PATH="$PATH:/usr/local/sbin:/gems/ruby-2.2.1/bin:/Users/barrop02/.rvm/gems/ruby-2.2.1@global/bin:/Users/barrop02/.rvm/rubies/ruby-2.2.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/barrop02/javalibs/ant/bin:/Users/barrop02/javalibs/maven/bin:/Users/barrop02/javalibs/gradle/bin:"
+export PATH="$PATH:/usr/local/sbin:/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/javalibs/ant/bin:$HOME/javalibs/maven/bin:$HOME/javalibs/gradle/bin:"
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/bin:/Users/barrop02/Workspace/galileo:$PATH"
+export PATH="/usr/local/bin:/$HOME/Workspace/galileo:$PATH"
 export BASH_CONFIG_DIR="$HOME/.profile_config"
 
 . $BASH_CONFIG_DIR/.certconf
