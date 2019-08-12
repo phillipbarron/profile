@@ -1,20 +1,20 @@
 #!/bin/sh -e
 
 s3cp(){
-        if [ "$3" == "live" ] ; then
-                BUCKET='live-galileo-interface-mt-resources-inputbucket-5nfo4tjd8049'
-                PROFILE='media-tools-prod'
-        fi
-        if [ "$3" == "test" ] ; then
-                BUCKET='test-galileo-interface-mt-resources-inputbucket-3z3olim0ng99'
-                PROFILE='media-tools-dev'
-        fi
-        if [ "$3" == "int" ] ; then
-                BUCKET='int-galileo-interface-mt-resources-inputbucket-i3g48dkvmuft'
-                PROFILE='media-tools-dev'
-        fi
-
-        aws s3 cp s3://$BUCKET/$1 $2 --profile $PROFILE
+    if [ "$3" == "live" ] ; then
+        BUCKET='live-galileo-interface-mt-resources-inputbucket-5nfo4tjd8049'
+        PROFILE='media-tools-prod'
+    fi
+    if [ "$3" == "test" ] ; then
+        BUCKET='test-galileo-interface-mt-resources-inputbucket-3z3olim0ng99'
+        PROFILE='media-tools-dev'
+    fi
+    if [ "$3" == "int" ] ; then
+        BUCKET='int-galileo-interface-mt-resources-inputbucket-i3g48dkvmuft'
+        PROFILE='media-tools-dev'
+    fi
+    
+    aws s3 cp s3://$BUCKET/$1 $2 --profile $PROFILE
 }
 
 # CPS_DEV
