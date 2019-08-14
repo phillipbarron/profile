@@ -8,7 +8,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="$PATH:/usr/local:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/javalibs/ant/bin:$HOME/javalibs/maven/bin:$HOME/javalibs/gradle/bin:$HOME/Workspace/galileo:$PATH"
+export PATH="$PATH:/usr/local:/usr/local/sbin:/bin:/usr/sbin:/sbin:$HOME/javalibs/ant/bin:$HOME/javalibs/maven/bin:$HOME/javalibs/gradle/bin:$HOME/Workspace/galileo:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
