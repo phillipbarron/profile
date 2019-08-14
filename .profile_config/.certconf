@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
 
 export SERVER_ENV=dev
 export CERT_LOCATION=$HOME/.certs/dev.bbc.co.uk.p12

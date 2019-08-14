@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -27,6 +27,7 @@ export BASH_CONFIG_DIR="$HOME/.profile_config"
 . $BASH_CONFIG_DIR/.aws_bash
 . $BASH_CONFIG_DIR/.git_bash
 . $BASH_CONFIG_DIR/.nvm-bash
+
 . ~/.profile # this is RVM
 
 alias cd..="cd .."

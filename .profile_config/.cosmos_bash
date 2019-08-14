@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Cosmos login Aliases
 
 pythonLogin(){

@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
 
 s3cp(){
   if [ "$3" == "live" ] ; then
