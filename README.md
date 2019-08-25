@@ -3,7 +3,7 @@
 Profile setup script - installs zsh & on-my-zsh then adds some other stuff.
 
 ```bash
-./setuo-profile.sh
+./setup-profile.sh
 ```
 
 ### todo
