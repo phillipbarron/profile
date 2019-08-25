@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Cosmos login Aliases
+
+pythonLogin(){
+  $HOME/workspace/cosmos-tooling/cosmos.py $2 $1
+}
+
+alias cssh='$HOME/workspace/cosmos-tooling/cosmos.py'
+
+alias issh='pythonLogin $1 int'
+alias tssh='pythonLogin $1 test'
+alias lssh='pythonLogin $1 live'

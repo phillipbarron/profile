@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+export keypairId=
+export private_key_string=
+export AWS_ACCESS_KEY_ID=
+export AWS_ACCOUNT_NAME=cps
+export AWS_SECRET_ACCESS_KEY=
+export ASSET_NOTIFICATIONS_QUEUE=https://sqs.eu-west-1.amazonaws.com/169163488685/dev-barrop02-optimo-asset-notifications
+export AWS_DEFAULT_REGION=eu-west-1
+export ENVIRONMENT=dev
+
+export FEATURE_TOGGLES='{"disableCropTools": false, "disableEditPublished": true, "disablePublishType": false, "disableSettingsTab": false, "disableWithdraw": false, "disableDelete": false, "disableConfirmUnsavedChanges": false, "disableLanguage": false }'
+alias optimo="cd $HOME/workspace/optimo && npm run start:dev"
