@@ -3,7 +3,6 @@
 # Export host OS
 . $PWD/host-os.sh
 
-
 copyConfigfiles(){
     mkdir $HOME/.profile_config
     cp dotfiles/* $HOME/.profile_config
