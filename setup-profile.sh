@@ -8,6 +8,9 @@ copyConfigfiles(){
     cp dotfiles/* $HOME/.profile_config
     mv $HOME/.zshrc $HOME/.zshrc.bak
     mv $HOME/.profile_config/zshrc $HOME/.zshrc
+    if [ $HOST_OS == "LINUX" ]; then
+        sed -i.bak '/java_bash\|proxyconf/d' $HOME/.zshrc
+    fi
 }
 
 installOhMyZsh() {
@@ -21,6 +24,7 @@ installForLinux() {
     apt-get install -y zsh curl git
     installOhMyZsh
     copyConfigfiles
+    
 }
 
 installForMacOS() {
@@ -32,7 +36,7 @@ installForMacOS() {
 
 
 if [ -d "$HOME/.profile_config" ]
-then 
+then
     echo "looks like it's already installed"
 else
     if [ $HOST_OS == "LINUX" ]
