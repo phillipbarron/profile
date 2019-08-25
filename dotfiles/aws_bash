@@ -21,4 +21,4 @@ s3cp(){
 export AWS_ACCOUNT_NUMBER=169163488685
 
 alias aws:clear="unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY"
-alias aws:env="env | grep AWS
+alias aws:env="env | grep AWS"
