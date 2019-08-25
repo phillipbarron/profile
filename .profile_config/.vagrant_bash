@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-alias v:ssh="vagrant ssh"
-alias v:up="vagrant up"
-alias v:halt="vagrant halt"
-alias v:r="vagrant reload"
