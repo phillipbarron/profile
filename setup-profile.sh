@@ -11,17 +11,23 @@ copyConfigfiles(){
     mv $HOME/.profile_config/zshrc $HOME/.zshrc
 }
 
+installOhMyZsh() {
+    if [ ! -d "$HOME/.oh-my-zsh" ]; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    fi
+}
+
 installForLinux() {
     # Install ZSH and Oh-My-ZSH
     apt-get install -y zsh curl git
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    installOhMyZsh
     copyConfigfiles
 }
 
 installForMacOS() {
     # Install ZSH and Oh-My-ZSH
     brew install zsh curl git
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    installOhMyZsh
     copyConfigfiles
 }
 
