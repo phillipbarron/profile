@@ -1,0 +1,47 @@
+Host sandbox
+ HostName pal.sandbox.dev.bbc.co.uk
+ User root
+ ForwardAgent yes
+
+Host cloud-sandbox
+ Hostname sandbox.bbc.co.uk
+ User developer
+ ForwardAgent yes
+
+Host forge
+ HostName bastion-cwwtf.dev.bbc.co.uk
+ Port 2222
+ ForwardAgent yes
+
+Host cloud-bastion
+ HostName access001.cloud.bbc.co.uk
+ User ${SSH_USERNAME}
+ ForwardAgent yes
+
+Host cloud-bastion-eng
+ HostName access001.a.eng.cloud.bbc.co.uk
+ User ${SSH_USERNAME}
+ ForwardAgent yes
+
+Host access*.cloud.bbc.co.uk
+  User ${SSH_USERNAME}
+
+Host *,eng,??-*-?
+    ProxyCommand >&1; h="%h"; exec ssh -q -p 22000 bastion-tunnel@access.${h##*,}.test.cloud.bbc.co.uk nc ${h%%,eng,*} %p
+
+Host *,??-*-?
+  # Example usage: ssh 10.0.121.10,eu-west-1
+  User ${SSH_USERNAME}
+  ProxyCommand >&1; h="%h"; exec ssh -q -p 22000 bastion-tunnel@access.${h##*,}.cloud.bbc.co.uk nc ${h%%,*} %p
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host github.com
+  Hostname github.com
+  User git
+
+Host *
+  ProxyCommand ~/.ssh/proxy %h %p
+  # Due to changes with Mac OS X Sierra: https://developer.apple.com/library/content/technotes/tn2449/_index.html
+  UseKeychain yes
+  AddKeysToAgent yes
