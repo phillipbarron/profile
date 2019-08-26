@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-s3cp(){
+s3cp() {
   if [ "$3" == "live" ] ; then
     BUCKET='live-galileo-interface-mt-resources-inputbucket-5nfo4tjd8049'
     PROFILE='media-tools-prod'

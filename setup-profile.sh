@@ -5,7 +5,7 @@
 
 copyConfigfiles(){
     mkdir $HOME/.profile_config
-    cp dotfiles/* $HOME/.profile_config
+    cp configuration_files/* $HOME/.profile_config
     mv $HOME/.zshrc $HOME/.zshrc.bak
     mv $HOME/.profile_config/zshrc $HOME/.zshrc
     if [ $HOST_OS == "LINUX" ]; then
@@ -16,6 +16,7 @@ copyConfigfiles(){
 installOhMyZsh() {
     if [ ! -d "$HOME/.oh-my-zsh" ]; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        chsh -s $(which zsh)
     fi
 }
 
