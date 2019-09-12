@@ -11,9 +11,7 @@ export JAVA_PROXY_OPTS="-Dhttp.useProxy=true
 -Dhttps.nonProxyHosts=localhost|pal.sandbox.dev.bbc.co.uk"
 
 # Java configuration
-export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=$HOME/workspace/client.p12
-  -Djavax.net.ssl.keyStorePassword=client
-  -Djavax.net.ssl.keyStoreType=PKCS12
+export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=$DEV_CERT_P12
   -Djavax.net.ssl.trustStore=$CERTS_LOCATION/jssecacerts
   -Djsse.enableSNIExtension=false
   -Duser.timezone=UTC"
@@ -21,9 +19,9 @@ export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=$HOME/workspace/client.p12
 # Maven configuration
 export MAVEN_OPTS="$PLATFORM_JAVA_OPTS
     -Xms256m -Xmx512m
-    -Denv.keyStore=/etc/pki/client.p12
+    -Denv.keyStore=$DEV_CERT_P12
     -Denv.keyStoreType=PKCS12
-    -Denv.keyStorePassword=client"
+    -Denv.keyStorePassword=$CERT_PASSPHRASE"
 
 export SBT_OPTS="$MAVEN_OPTS -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=512m"
 
