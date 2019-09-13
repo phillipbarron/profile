@@ -11,7 +11,7 @@ alias g:l="git log"
 alias g:rc="git rebase --continue"
 alias g:r="git rebase -i HEAD~"
 alias g:remote="git fetch origin && git reset --hard origin/master"
-alias g:pull="echo \"git pull origin\" $(git branch | grep -E '^\* ' | sed 's/^\* //g')"
+alias g:pull="git pull origin $(git branch | grep -E '^\* ' | sed 's/^\* //g')"
 # reguired for GPG
 export GPG_TTY=$(tty)
 export GITHUB_ACCESS_TOKEN=
