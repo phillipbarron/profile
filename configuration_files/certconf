@@ -2,7 +2,7 @@
 
 export SERVER_ENV=dev
 export CERT_LOCATION=$HOME/.certs/dev.bbc.co.uk.p12
-export COMBINED_DEV_CERT_PEM=$HOME/.certs/dev.bbc.co.uk.pem
+export COMBINED_DEV_CERT_PEM=$CERTS_LOCATION/dev.bbc.co.uk.pem
 export CERT_PASSPHRASE=dev.bbc.co.uk
 
 # Generic Cert Locations
@@ -13,7 +13,7 @@ export DEV_CERT_P12=$CERTS_LOCATION/dev.bbc.co.uk.p12
 export DEV_CERT_P12_PASSWORD=dev.bbc.co.uk
 export DEV_CERT_P12_PASSWORD=$CERT_PASSPHRASE
 
-export COSMOS_CERT_KEY=/etc/pki/tls/private/client.key
+export COSMOS_CERT_KEY=$CERT_LOCATION/dev.bbc.co.uk.key
 export COSMOS_CERT=$DEV_CERT_PEM
 export COSMOS_CA=$CA_BUNDLE
 
