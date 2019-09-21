@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = Phill Barron
 	email = Phill.Barron@bbc.co.uk 
-	signingKey = C7F6E9662A731D0E
+	signingKey =
 [core]
 	#autocrlf = input
 [url "git+ssh://git@github.com/"]
