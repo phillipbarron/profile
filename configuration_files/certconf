@@ -2,11 +2,11 @@
 
 export SERVER_ENV=dev
 export CERT_LOCATION=$HOME/.certs/dev.bbc.co.uk.p12
-export COMBINED_DEV_CERT_PEM=$CERTS_LOCATION/dev.bbc.co.uk.pem
 export CERT_PASSPHRASE=dev.bbc.co.uk
 
 # Generic Cert Locations
 export CERTS_LOCATION=$HOME/.certs
+export COMBINED_DEV_CERT_PEM=$CERTS_LOCATION/dev.bbc.co.uk.pem
 export CA_BUNDLE=$CERTS_LOCATION/ca-bundle.crt
 export DEV_CERT_PEM=$CERTS_LOCATION/dev.bbc.co.uk.pem
 export DEV_CERT_P12=$CERTS_LOCATION/dev.bbc.co.uk.p12
