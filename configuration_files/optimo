@@ -9,5 +9,5 @@ export ASSET_NOTIFICATIONS_QUEUE=https://sqs.eu-west-1.amazonaws.com/16916348868
 export AWS_DEFAULT_REGION=eu-west-1
 export ENVIRONMENT=dev
 
-export FEATURE_TOGGLES='{"disableCropTools": false, "disableEditPublished": true, "disablePublishType": false, "disableSettingsTab": false, "disableWithdraw": false, "disableDelete": false, "disableConfirmUnsavedChanges": false, "disableLanguage": false }'
+export FEATURE_TOGGLES='{}'
 alias optimo="cd $HOME/workspace/optimo && npm run start:dev"
