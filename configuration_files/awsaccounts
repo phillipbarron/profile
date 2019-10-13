@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 export AWS_REGION=eu-west-1
-
-#export AWS_MEDIA_TOOLS_DEV=
-#export AWS_MEDIA_TOOLS_PROD=
 export AWS_BBC_ENGINEERING=390862994245
 export AWS_BBC_PRODUCTION=240129357028
 
