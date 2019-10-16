@@ -11,8 +11,7 @@ export JAVA_PROXY_OPTS="-Dhttp.useProxy=true
 -Dhttps.nonProxyHosts=localhost|pal.sandbox.dev.bbc.co.uk"
 
 # Java configuration
-export PLATFORM_JAVA_OPTS="-Djavax.net.ssl.keyStore=$DEV_CERT_P12
-  -Djavax.net.ssl.trustStore=$CERTS_LOCATION/jssecacerts
+export PLATFORM_JAVA_OPTS="$DEV_CERT_JAVA_OPTS
   -Djsse.enableSNIExtension=false
   -Duser.timezone=UTC"
 
