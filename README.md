@@ -15,5 +15,5 @@ Profile setup script - installs zsh & on-my-zsh then adds some other stuff.
 * maybe change the ownership of the config files? Had some odd permissions stuff in the last run
 * install the python 3 requirements for the cosmps tooling on mac / linux
 * automatically do the certificate installation
-* add maven config
 * add scala setup
+* replace username in maven config
