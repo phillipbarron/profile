@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <settings>
-        <localRepository>/Users/phillipbarron/Documents/mvn_cps_repo</localRepository>
+        <localRepository>/Users/SSH_USERNAME/Documents/mvn_cps_repo</localRepository>
         <pluginGroups>
             <pluginGroup>bbc.forge.maven.plugin</pluginGroup>
             <pluginGroup>org.apache.felix</pluginGroup>
