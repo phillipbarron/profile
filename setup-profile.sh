@@ -5,6 +5,8 @@
 
 copyConfigfiles(){
     mkdir $HOME/.profile_config
+    mkdir -p $HOME/.m2
+    cp configuration_files/java/maven-settings.xml $HOME/.m2/settings.xml
     cp configuration_files/* $HOME/.profile_config
     mv $HOME/.zshrc $HOME/.zshrc.bak
     mv $HOME/.profile_config/zshrc $HOME/.zshrc
