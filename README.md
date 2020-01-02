@@ -1,6 +1,6 @@
 # profile
 
-Profile setup script - installs zsh & on-my-zsh adds a load of config stuff (git, optimo, maven, cosmos).
+Profile setup script - installs zsh & oh-my-zsh adds a load of config stuff (git, optimo, maven, cosmos).
 
 ```bash
 ./setup-profile.sh
