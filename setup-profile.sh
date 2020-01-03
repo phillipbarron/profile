@@ -3,7 +3,7 @@
 # Export host OS
 . $PWD/host-os.sh
 
-export SSH_USENAME=`whoami`
+export SSH_USERNAME=`whoami`
 
 copyConfigfiles(){
     mkdir $HOME/.profile_config
@@ -30,7 +30,7 @@ installForLinux() {
     apt-get install -y zsh curl git
     installOhMyZsh
     copyConfigfiles
-    
+
 }
 
 installForMacOS() {

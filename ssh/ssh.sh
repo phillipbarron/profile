@@ -11,7 +11,7 @@ if [ ! -f "$HOME/.ssh/id_rsa" ]; then
         echo ".rnd owned by root, removing. Will ask for your machine password."
         sudo rm -f $HOME/.rnd
     fi
-    
+
     printf "Generating SSH Certificate"
     echo "Please follow the instructions given in the next step..."
     echo "Note: Choose a secure password (preferably different from your login, this can be stored in your keychain so you don't have to reenter it each time)"
@@ -26,5 +26,6 @@ if [ $HOST_OS == "MACOS"]
   chmod +x $HOME/.ssh/proxy
 fi
 
+# Might be useful to move this to its own function
 export SSH_USERNAME=$(curl --cert $HOME/.certs/dev.bbc.co.uk.pem --cacert $HOME/.certs/ca-bundle.crt https://api.live.bbc.co.uk/cosmos/user/$EMAIL_ADDRESS 2>/dev/null | jq '.username' --raw-output)
 sed -i -e "s#\${SSH_USERNAME}#$SSH_USERNAME#g" $HOME/.ssh/config
