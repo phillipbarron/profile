@@ -39,16 +39,4 @@ installForMacOS() {
     installOhMyZsh
     copyConfigfiles
 }
-
-
-if [ -d "$HOME/.profile_config" ]
-then
-    echo "looks like it's already installed"
-else
-    if [ $HOST_OS == "LINUX" ]
-    then
-        installForLinux
-    else
-        installForMacOS
-    fi
-fi
+installForLinux
