@@ -1,0 +1,51 @@
+Host access.*.cloud.bbc.co.uk
+  IdentityFile ~/.ssh/id_rsa
+  # Use the following ProxyCommand if you're on the BBC Reith network
+  # ProxyCommand nc -x socks-gw.reith.bbc.co.uk:1085 -X 5 %h %p
+  # Or use the following ProxyCommand if you're on a non-BBC network and have an
+  # account on the Forge bastion servers
+  # ProxyCommand ssh -q -p 2222 barrop02@bastion-cwwtf.dev.bbc.co.uk nc %h %p
+  # Or comment out both ProxyCommand lines if you're using "BBC Staff SSID" wifi
+
+Host sandbox
+ HostName pal.sandbox.dev.bbc.co.uk
+ User root
+ ForwardAgent yes
+
+Host cloud-sandbox
+ Hostname sandbox.bbc.co.uk
+ User developer
+ ForwardAgent yes
+
+Host forge
+ HostName bastion-cwwtf.dev.bbc.co.uk
+ Port 2222
+ ForwardAgent yes
+
+Host cloud-bastion
+ HostName access001.cloud.bbc.co.uk
+ User COSMOS_USER_NAME
+ ForwardAgent yesCOSMOS_USER_
+
+Host cloud-bastion-eng
+ HostName access001.a.eng.cloud.bbc.co.uk
+ User COSMOS_USER_NAME
+ ForwardAgent yes
+
+Host access*.cloud.bbc.co.uk
+  User COSMOS_USER_NAME
+
+Host *,eng,??-*-?
+    ProxyCommand >&1; h="%h"; exec ssh -q -p 22000 bastion-tunnel@access.${h##*,}.test.cloud.bbc.co.uk nc ${h%%,eng,*} %p
+
+Host *,??-*-?
+  # Example usage: ssh 10.0.121.10,eu-west-1
+  User COSMOS_USER_NAME
+  ProxyCommand >&1; h="%h"; exec ssh -q -p 22000 bastion-tunnel@access.${h##*,}.cloud.bbc.co.uk nc ${h%%,*} %p
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+Host github.com
+  Hostname github.com
+  User git
+#Host *
+#ProxyCommand ~/.ssh/proxy %h %p
