@@ -16,4 +16,5 @@ Profile setup script - installs zsh & oh-my-zsh adds a load of config stuff (git
 * automatically do the certificate installation
 * add Scala setup
 * remove any me-centric stuff
-* intregrate the ssh stuff
+* integrate the ssh stuff
+* does this need to be run with Admin priviliges?
