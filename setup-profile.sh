@@ -39,4 +39,24 @@ installForMacOS() {
     installOhMyZsh
     copyConfigfiles
 }
-installForLinux
+
+generateCertificates() {
+    echo "Generate certifictes? ? [y/N]"
+    read generateCertifcates
+
+if [ "$generateCertifcates" == "y" ]; then
+    . $PWD/certificates/cert-generation.sh
+fi
+}
+
+if [ -d "$HOME/.profile_config" ]
+then
+    echo "looks like it's already installed"
+else
+    if [ $HOST_OS == "LINUX" ]
+    then
+        installForLinux
+    else
+        installForMacOS
+    fi
+fi 
