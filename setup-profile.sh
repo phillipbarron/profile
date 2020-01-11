@@ -68,9 +68,25 @@ setupProfile() {
 }
 
 maiMenu() {
-    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n"
-    echo "$userInputResult"
-    echo "fin"
+    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n4. Exit\n"
+    case "$userInputResult" in
+    "1")
+        echo "profile"
+        ;;
+    "2")
+        echo "Certs"
+        ;;
+    "3")
+        echo "Configure ssh"
+        ;;
+    "4")
+        echo "exit"
+        return
+        ;;
+    *)
+        echo "wtf?"
+        ;;
+    esac
 }
 
 maiMenu
