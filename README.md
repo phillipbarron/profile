@@ -10,7 +10,7 @@ generates all the certificates nneded for BBC dev work. Requires the location of
 
 ## SSH
 
-Sets up your ssh config to allow access to BBC deployed stuff
+Sets up your ssh config to allow access to BBC deployed stuff - sets key in Cosmos, writes your SSH key to GitHub & sets proxy SSH settings
 
 ## Cosmos tooling
 
