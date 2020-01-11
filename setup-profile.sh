@@ -65,8 +65,20 @@ setupProfile() {
     fi
 }
 
+installCosmosTooling() {
+    echo "Installing Cosmos tooling..."
+    if [ ! -d $HOME/workspace ]; then
+        md $HOME/workspace
+    fi
+    if [ -d $HOME/workspace/cosmos-tooling ]; then
+        echo "Cosmos tooling is already installed"
+        maiMenu
+    fi
+    git clone git@github.com:phillipbarron/cosmos-tooling.git $HOME/workspace    
+}
+
 maiMenu() {
-    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n4. Exit\n"
+    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n4. Install Cosmos tooling\n5. Exit\n"
     case "$userInputResult" in
     "1")
         setupProfile
@@ -78,11 +90,15 @@ maiMenu() {
         echo "Configure ssh"
         ;;
     "4")
-        echo "exit"
+        installCosmosTooling
+        ;;
+    "5")
+        echo "Bye!"
         return
         ;;
     *)
         echo "wtf?"
+        maiMenu
         ;;
     esac
 }
