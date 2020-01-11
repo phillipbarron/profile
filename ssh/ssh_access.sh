@@ -29,14 +29,14 @@ writeSshKeyToGithub(){
     fi
 }
 
-printf "Write SSH key to Cosmos? [y/N]\n"
+printf "\nWrite SSH key to Cosmos? [y/N]\n"
 read writeToCosmos
 
 if [ "$writeToCosmos" == "y" ]; then
     writeToCosmos
 fi
 
-printf "Write SSH key to GitHub? [y/N]\n"
+printf "\nWrite SSH key to GitHub? [y/N]\n"
 read writeToGithub
 
 if [ "$writeToGithub" == "y" ]; then
