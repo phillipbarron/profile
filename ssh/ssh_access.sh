@@ -30,14 +30,14 @@ writeSshKeyToGithub(){
 }
 
 printf "Write SSH key to Cosmos? [y/N]\n"
-read writeToGighub
+read writeToCosmos
 
-if [ "$writeToGithub" == "y" ]; then
-    writeSshKeyToGithub
+if [ "$writeToCosmos" == "y" ]; then
+    writeToCosmos
 fi
 
 printf "Write SSH key to GitHub? [y/N]\n"
-read writeToGighub
+read writeToGithub
 
 if [ "$writeToGithub" == "y" ]; then
     writeSshKeyToGithub
