@@ -5,6 +5,11 @@
 
 export SSH_USERNAME=`whoami`
 
+getUserConfirmation() {
+    printf "$1"
+    read userInputResult
+}
+
 copyConfigfiles(){
     mkdir $HOME/.profile_config
     mkdir -p $HOME/.m2
@@ -30,7 +35,7 @@ installForLinux() {
     apt-get install -y zsh curl git
     installOhMyZsh
     copyConfigfiles
-
+    
 }
 
 installForMacOS() {
@@ -43,20 +48,29 @@ installForMacOS() {
 generateCertificates() {
     echo "Generate certifictes? ? [y/N]"
     read generateCertifcates
-
-if [ "$generateCertifcates" == "y" ]; then
-    . $PWD/certificates/cert-generation.sh
-fi
+    
+    if [ "$generateCertifcates" == "y" ]; then
+        . $PWD/certificates/cert-generation.sh
+    fi
 }
 
-if [ -d "$HOME/.profile_config" ]
-then
-    echo "looks like it's already installed"
-else
-    if [ $HOST_OS == "LINUX" ]
-    then
-        installForLinux
+setupProfile() {
+    if [ -d "$HOME/.profile_config" ]; then
+        echo "looks like it's already installed"
     else
-        installForMacOS
+        if [ $HOST_OS == "LINUX" ]
+        then
+            installForLinux
+        else
+            installForMacOS
+        fi
     fi
-fi 
+}
+
+maiMenu() {
+    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n"
+    echo "$userInputResult"
+    echo "fin"
+}
+
+maiMenu
