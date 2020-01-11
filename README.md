@@ -28,7 +28,6 @@ install cosmos ssh tooling
 * Change the ownership of the config files? Had some odd permissions stuff on the last run
 * install the Python requirements for the cosmps tooling on Macos / Ubuntu
 * add Scala setup
-* remove any me-centric stuff
 * integrate the ssh stuff
 * does this need to be run with Admin priviliges?
 * update the ssh script to require confirmation for each step

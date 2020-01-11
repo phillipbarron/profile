@@ -32,7 +32,7 @@ installOhMyZsh() {
 
 installForLinux() {
     # Install ZSH and Oh-My-ZSH
-    apt-get install -y zsh curl git
+    apt-get install -y zsh curl git jq
     installOhMyZsh
     copyConfigfiles
     
@@ -40,7 +40,7 @@ installForLinux() {
 
 installForMacOS() {
     # Install ZSH and Oh-My-ZSH
-    brew install zsh curl git python
+    brew install zsh curl git python jq
     installOhMyZsh
     copyConfigfiles
 }
