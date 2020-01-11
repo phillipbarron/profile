@@ -46,11 +46,9 @@ installForMacOS() {
 }
 
 generateCertificates() {
-    echo "Generate certifictes? ? [y/N]"
-    read generateCertifcates
-    
-    if [ "$generateCertifcates" == "y" ]; then
-        . $PWD/certificates/cert-generation.sh
+    getUserConfirmation "Generate certifictes? ? [y/N]"
+    if [ "$userInputResult" == "y" ]; then
+        . $PWD/certificates/cert_generation.sh
     fi
 }
 
@@ -74,7 +72,7 @@ maiMenu() {
         echo "profile"
         ;;
     "2")
-        echo "Certs"
+        generateCertificates
         ;;
     "3")
         echo "Configure ssh"
