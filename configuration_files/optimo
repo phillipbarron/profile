@@ -2,7 +2,7 @@
 
 export keypairId=
 export private_key_string=
-export ASSET_NOTIFICATIONS_QUEUE=https://sqs.eu-west-1.amazonaws.com/169163488685/dev-barrop02-optimo-asset-notifications
+export ASSET_NOTIFICATIONS_QUEUE=
 export ENVIRONMENT=dev
 
 export FEATURE_TOGGLES='{}'
