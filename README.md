@@ -32,5 +32,3 @@ install cosmos ssh tooling
 * integrate the ssh stuff
 * does this need to be run with Admin priviliges?
 * update the ssh script to require confirmation for each step
-* add cosmos tooling
-

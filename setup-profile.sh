@@ -40,7 +40,7 @@ installForLinux() {
 
 installForMacOS() {
     # Install ZSH and Oh-My-ZSH
-    brew install zsh curl git
+    brew install zsh curl git python
     installOhMyZsh
     copyConfigfiles
 }
