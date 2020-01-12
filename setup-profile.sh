@@ -25,24 +25,25 @@ copyConfigfiles(){
 
 installOhMyZsh() {
     if [ ! -d "$HOME/.oh-my-zsh" ]; then
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
         chsh -s $(which zsh)
+        printf "\nyou will need to restart the machine for this to take effect\n"
     fi
 }
 
 installForLinux() {
     # Install ZSH and Oh-My-ZSH
     apt-get install -y zsh curl git jq
-    installOhMyZsh
     copyConfigfiles
+    installOhMyZsh
     
 }
 
 installForMacOS() {
     # Install ZSH and Oh-My-ZSH
     brew install zsh curl git python jq
-    installOhMyZsh
     copyConfigfiles
+    installOhMyZsh
 }
 
 generateCertificates() {
