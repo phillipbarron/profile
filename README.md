@@ -1,12 +1,12 @@
-# Dev Environment Setup
+# Dev environment setup
 
 ## Profile
 
-Profile setup script - installs zsh & oh-my-zsh adds a load of config stuff (git, optimo, maven, cosmos).
+Profile setup script - installs zsh & oh-my-zsh adds a load of config stuff (git, optimo, maven, cosmos, jq, curl).
 
 ## Certificates
 
-generates all the certificates nneded for BBC dev work. Requires the location of your BBC p12 format certificate
+generates all the certificates needed for BBC dev work. Requires the location of your BBC p12 format certificate
 
 ## SSH
 
@@ -30,3 +30,4 @@ install cosmos ssh tooling
 * add Scala setup
 * integrate the ssh stuff - ***in progress***
 * update the ssh script to require confirmation for each step - ***in progress***
+* set default location for cert to $HOME/workspace - ***in progress***
