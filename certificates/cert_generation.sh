@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ -z "$P12_LOCATION" ]; then
-    printf "Please enter the location of your exported .p12 file: "
+    printf "Please enter the location of your exported .p12 file [$HOME/workspace/dev.bbc.co.uk.p12]: "
     read P12_LOCATION
-    
+    P12_LOCATION="${P12_LOCATION:-$HOME/workspace/dev.bbc.co.uk.p12}"
     # Replace ~ with $HOME so it expands correctly
     P12_LOCATION=${P12_LOCATION/#\~/$HOME}
 fi

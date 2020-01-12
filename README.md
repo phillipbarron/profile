@@ -30,4 +30,3 @@ install cosmos ssh tooling
 * add Scala setup
 * integrate the ssh stuff - ***in progress***
 * update the ssh script to require confirmation for each step - ***in progress***
-* set default location for cert to $HOME/workspace - ***in progress***
