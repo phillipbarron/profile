@@ -80,7 +80,7 @@ installCosmosTooling() {
 }
 
 mainMenu() {
-    getUserConfirmation "Choose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n4. Install Cosmos tooling\n5. install Oh My Zsh\n6. Exit\n"
+    getUserConfirmation "\nChoose install option:\n1. Setup profile\n2. Install certificates\n3. Configure shh\n4. Install Cosmos tooling\n5. install Oh My Zsh\n6. Exit\n"
     case "$userInputResult" in
         "1")
             setupProfile
