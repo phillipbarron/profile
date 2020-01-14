@@ -36,3 +36,11 @@ writeSshConfig(){
     echo "THIE SSH_USERNAME IS $SSH_USERNAME"
     sed -i -e "s#\${SSH_USERNAME}#$SSH_USERNAME#g" $HOME/.ssh/config
 }
+
+printf "\nWrite SSH config? [y/N]\n"
+read writeSshConfiguration
+
+if [ "$writeSshConfiguration" == "y" ]; then
+    writeSshConfig
+fi
+
