@@ -11,10 +11,10 @@ if [ ! -f "$HOME/.ssh/id_rsa" ]; then
         echo ".rnd owned by root, removing. Will ask for your machine password."
         sudo rm -f $HOME/.rnd
     fi
-    
+
     printf "Generating SSH Certificate"
     echo "Please follow the instructions given in the next step..."
-    echo "Note: Choose a secure password (preferably different from your login, this can be stored in your keychain so you don't have to reenter it each time)"
+    echo "Note: Choose a secure password (preferably different from your login, this can be stored in your keychain so you don't have to re-enter it each time)"
     ssh-keygen -t rsa -C "$EMAIL_ADDRESS"
 fi
 
