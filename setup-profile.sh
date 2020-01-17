@@ -14,7 +14,7 @@ copyConfigfiles(){
     mkdir $HOME/.profile_config
     mkdir -p $HOME/.m2
     cp configuration_files/java/maven-settings.xml $HOME/.m2/settings.xml
-    sed -i.bak -e "s/SSH_USERNAME/$SSH_USERNAME/g" $HOME/.m2/settings.xml
+    sed -i.bak -e "s/SSH_USERNAME/$SSH_USERNAME/g" $HOME/.m2/settings.xml #this needs fixing for linux - wrong dorectory referenced in maven settings
     cp configuration_files/* $HOME/.profile_config
 }
 
@@ -24,7 +24,7 @@ installOhMyZsh() {
             mv  $HOME/.zshrc $HOME/.zshrc.bak
         fi
         mv $HOME/.profile_config/zshrc $HOME/.zshrc
-        
+
         if [ $HOST_OS == "LINUX" ]; then
             sed -i.bak '/java_bash\|proxyconf/d' $HOME/.zshrc
         fi

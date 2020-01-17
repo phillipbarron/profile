@@ -31,10 +31,8 @@ writeSshConfig(){
     printf "\nEnter your BBC email address: "
     read EMAIL_ADDRESS
 
-    # Might be useful to move this to its own function
-    export SSH_USERNAME=$(curl --cert $HOME/.certs/dev.bbc.co.uk.pem --cacert $HOME/.certs/ca-bundle.crt https://api.live.bbc.co.uk/cosmos/user/$EMAIL_ADDRESS 2>/dev/null | jq '.username' --raw-output)
-    echo "THIE SSH_USERNAME IS $SSH_USERNAME"
-    sed -i -e "s#\${SSH_USERNAME}#$SSH_USERNAME#g" $HOME/.ssh/config
+    export COSMOS_SSH_USERNAME=$(curl --cert $HOME/.certs/dev.bbc.co.uk.pem --cacert $HOME/.certs/ca-bundle.crt https://api.live.bbc.co.uk/cosmos/user/$EMAIL_ADDRESS 2>/dev/null | jq '.username' --raw-output)
+    sed -i -e "s#\${COSMOS_SSH_USERNAME}#$COSMOS_SSH_USERNAME#g" $HOME/.ssh/config
 }
 
 printf "\nWrite SSH config? [y/N]\n"
