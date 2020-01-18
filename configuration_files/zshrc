@@ -26,5 +26,4 @@ export BASH_CONFIG_DIR="$HOME/.profile_config"
 . $BASH_CONFIG_DIR/proxyconf
 . $BASH_CONFIG_DIR/vagrant_bash
 
-alias cd..="cd .."
 alias init=". ~/.zshrc && echo 'bash profile re-initialised'"
