@@ -28,4 +28,3 @@ install cosmos ssh tooling
 * install the Python requirements for the cosmos tooling on Macos / Ubuntu
 * add Scala setup
 * integrate the ssh stuff - ***in progress***
-* update the ssh script to require confirmation for each step - ***in progress***
