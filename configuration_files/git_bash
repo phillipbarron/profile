@@ -11,7 +11,8 @@ alias g:l="git log"
 alias g:rc="git rebase --continue"
 alias g:r="git rebase -i HEAD~"
 alias g:remote="git fetch origin && git reset --hard origin/master"
+alias g:help="echo \"\ng:s: git status\ng:d: git diff\ng:f: git fetch\ng:pom: git pull origin master\ng:p: git push current branch\ng:l: git log\""
+
 # reguired for GPG
 export GPG_TTY=$(tty)
 export GITHUB_ACCESS_TOKEN=
-alias g:help="echo \"\ng:s: git status\ng:d: git diff\ng:f: git fetch\ng:pom: git pull origin master\ng:p: git push current branch\ng:l: git log\""

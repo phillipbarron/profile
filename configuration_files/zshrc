@@ -6,11 +6,9 @@ ZSH_THEME="pygmalion"
 
 plugins=(git)
 
-# User configuration
-
 export PATH="$PATH:/usr/local:/usr/local/sbin:/bin:/usr/sbin:/sbin:$HOME/javalibs/ant/bin:$HOME/javalibs/maven/bin:$HOME/javalibs/gradle/bin"
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 export BASH_CONFIG_DIR="$HOME/.profile_config"
 

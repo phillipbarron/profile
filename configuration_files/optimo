@@ -4,6 +4,6 @@ export keypairId=
 export private_key_string=
 export ASSET_NOTIFICATIONS_QUEUE=
 export ENVIRONMENT=dev
-
 export FEATURE_TOGGLES='{}'
+
 alias optimo="cd $HOME/workspace/optimo && yarn run start:dev"
