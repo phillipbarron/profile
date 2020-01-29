@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-alias castaway-rebuild-db="v:ssh -c \"cd workspace/castaway && mysql -u root -pcastaway -e 'drop database castaway_dev; create database castaway_dev' && php artisan migrate && php artisan db:seed --class=WarningTableSeeder && php artisan db:seed --class=LanguageTableSeeder && php artisan db:seed --class=FeatureToggleSeeder\""
