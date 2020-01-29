@@ -6,6 +6,7 @@ ZSH_THEME="pygmalion"
 
 plugins=(git)
 
+# review this PATH
 export PATH="$PATH:/usr/local:/usr/local/sbin:/bin:/usr/sbin:/sbin:$HOME/javalibs/ant/bin:$HOME/javalibs/maven/bin:$HOME/javalibs/gradle/bin"
 
 . $ZSH/oh-my-zsh.sh

@@ -27,4 +27,5 @@ install cosmos ssh tooling
 * Fix the java setup for Linux (at present we just remove it)
 * install the Python requirements for the cosmos tooling on Macos / Ubuntu
 * add Scala setup
+* review the PATH in the BASH profile
 * integrate the ssh stuff - ***in progress***
