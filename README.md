@@ -14,11 +14,13 @@ Sets up your ssh config to allow access to BBC deployed stuff - sets key in Cosm
 
 ## Cosmos tooling
 
-install cosmos ssh tooling
+installs cosmos ssh tooling
 
 ```bash
 ./setup-profile.sh
 ```
+
+execute as about and chose install options
 
 ### todo
 

@@ -14,7 +14,7 @@ copyConfigfiles(){
     mkdir $HOME/.profile_config
     mkdir -p $HOME/.m2
     cp configuration_files/java/maven-settings.xml $HOME/.m2/settings.xml
-    sed -i.bak -e "s/SSH_USERNAME/$SSH_USERNAME/g" $HOME/.m2/settings.xml #this needs fixing for linux - wrong dorectory referenced in maven settings
+    sed -i.bak -e "s/SSH_USERNAME/$SSH_USERNAME/g" $HOME/.m2/settings.xml #this needs fixing for linux - wrong directory referenced in maven settings
     cp configuration_files/* $HOME/.profile_config
 }
 
@@ -86,7 +86,7 @@ mainMenu() {
             setupProfile
         ;;
         "2")
-            generateCertificates
+            generateCertificates && mainMenu
         ;;
         "3")
             echo "Configure ssh"
