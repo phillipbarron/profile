@@ -29,3 +29,4 @@ install cosmos ssh tooling
 * add Scala setup
 * review the PATH in the BASH profile
 * integrate the ssh stuff - ***in progress***
+* provide and interactive menu - ***in progress***
