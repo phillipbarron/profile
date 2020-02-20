@@ -24,5 +24,6 @@ export BASH_CONFIG_DIR="$HOME/.profile_config"
 . $BASH_CONFIG_DIR/optimo-e2e
 . $BASH_CONFIG_DIR/proxyconf
 . $BASH_CONFIG_DIR/vagrant_bash
+. $BASH_CONFIG_DIR/wormhole_access
 
 alias init=". ~/.zshrc && echo 'bash profile re-initialised'"
