@@ -31,4 +31,4 @@ execute as about and chose install options
 * add Scala setup
 * review the PATH in the BASH profile
 * integrate the ssh stuff - ***in progress***
-* provide and interactive menu - ***in progress***
+* provide an interactive menu - ***in progress***

@@ -92,10 +92,10 @@ mainMenu() {
             echo "Configure ssh"
         ;;
         "4")
-            installCosmosTooling
+            installCosmosTooling && mainMenu
         ;;
         "5")
-            installOhMyZsh
+            installOhMyZsh && mainMenu
         ;;
         "6")
             echo "Bye!"
