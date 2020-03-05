@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 addWormholeAccess(){
   if [ $2 = "prod" ] ; then
     AWS_ACCOUNT_NUMBER=303748928824
@@ -5,7 +7,6 @@ addWormholeAccess(){
   if [ $2 = "dev" ] ; then
     AWS_ACCOUNT_NUMBER=169163488685
   fi
-  echo "and we are here"
   cd $HOME/workspace/multi-account-infrastructure && ./admin allow-user $AWS_ACCOUNT_NUMBER $1 AdministratorAccess && cd -
 }
 

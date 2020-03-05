@@ -20,7 +20,7 @@ installs cosmos ssh tooling
 ./setup-profile.sh
 ```
 
-execute as about and chose install options
+execute and chose install options
 
 ### todo
 
