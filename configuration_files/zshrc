@@ -15,14 +15,12 @@ export BASH_CONFIG_DIR="$HOME/.profile_config"
 
 . $BASH_CONFIG_DIR/aws_bash
 . $BASH_CONFIG_DIR/bashtools
-. $BASH_CONFIG_DIR/castaway
 . $BASH_CONFIG_DIR/certconf
 . $BASH_CONFIG_DIR/cosmos_bash
 . $BASH_CONFIG_DIR/git_bash
 . $BASH_CONFIG_DIR/java_bash
 . $BASH_CONFIG_DIR/optimo
 . $BASH_CONFIG_DIR/optimo-e2e
-. $BASH_CONFIG_DIR/proxyconf
 . $BASH_CONFIG_DIR/vagrant_bash
 . $BASH_CONFIG_DIR/wormhole_access
 
