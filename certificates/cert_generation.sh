@@ -36,7 +36,7 @@ curl https://ca.dev.bbc.co.uk/cloud-ca.pem > $HOME/.certs/cloud-ca.pem
 SSL_CERT_FILE_ORIG=$SSL_CERT_FILE
 unset SSL_CERT_FILE
 
-curl https://curl.haxx.se/ca/cacert.pem > $HOME/.certs/ca-bundle.tmp
+curl https://curl.se/ca/cacert.pem > $HOME/.certs/ca-bundle.tmp
 cat $HOME/.certs/ca-bundle.tmp $HOME/.certs/ca.pem $HOME/.certs/cloud-ca.pem > $HOME/.certs/ca-bundle.crt
 rm $HOME/.certs/*.tmp
 
