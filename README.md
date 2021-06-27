@@ -31,3 +31,4 @@ execute and chose install options
 * add Scala setup
 * review the PATH in the BASH profile
 * fix all the proxy stuff - zscaler blah
+* add a javascript config file - put the nvm crap in there
