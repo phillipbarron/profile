@@ -30,6 +30,4 @@ execute and chose install options
 * install the Python requirements for the cosmos tooling on Macos / Ubuntu
 * add Scala setup
 * review the PATH in the BASH profile
-* integrate the ssh stuff (may want to make this optional for when setting up non-work machines)- ***in progress***
-* provide an interactive menu - ***in progress***
 * fix all the proxy stuff - zscaler blah
