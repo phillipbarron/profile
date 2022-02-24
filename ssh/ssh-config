@@ -32,7 +32,7 @@ Host *,eng,??-*-?
 Host *,??-*-?
   # Example usage: ssh 10.0.121.10,eu-west-1
   User ${COSMOS_SSH_USERNAME}
-  ProxyCommand >&1; h="%h"; exec ssh -q -p 22000 bastion-tunnel@access.${h##*,}.cloud.bbc.co.uk nc ${h%%,*} %p
+  ProxyCommand >&1; IFS=,. read -r a b c d r <<<"%h"; exec ssh -q -p 22000 bastion-tunnel@$((b / 32)).access.$r.cloud.bbc.co.uk nc $a.$b.$c.$d %p
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
