@@ -17,6 +17,11 @@ export COSMOS_CERT_KEY=$DEV_CERT_PEM
 export COSMOS_CERT=$DEV_CERT_PEM
 export COSMOS_CA=$CA_BUNDLE
 
+# GoBBC related
+export BBC_CERT_PATH=$DEV_CERT_PEM
+export BBC_KEY_PATH=$DEV_CERT_PEM
+export BBC_CA_PATH="/etc/pki/tls/certs/ca-bundle.crt"
+
 # Test Related
 export navigator_cert=$DEV_CERT_PEM
 export BBC_P12_KEY=$DEV_CERT_P12:$DEV_CERT_P12_PASSWORD
@@ -31,5 +36,3 @@ export DEV_CERT_JAVA_OPTS="
 -Djavax.net.ssl.keyStore=$DEV_CERT_P12
 -Djavax.net.ssl.keyStorePassword=$DEV_CERT_P12_PASSWORD
 -Djavax.net.ssl.keyStoreType=PKCS12"
-
-
