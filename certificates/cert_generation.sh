@@ -30,6 +30,7 @@ echo "Creating CA Bundles"
 mkdir -p $HOME/.certs
 curl https://ca.dev.bbc.co.uk/ca.pem > $HOME/.certs/ca.pem
 curl https://ca.dev.bbc.co.uk/cloud-ca.pem > $HOME/.certs/cloud-ca.pem
+curl https://ca.dev.bbc.co.uk/certificates/bbc-ca-development-services.pem > $HOME/.certs/dev-cloud-ca.pem
 
 # Temporarily store value in SSL_CERT_FILE as there may be a case when rerunning this script after moving
 # or deleting the certs folder where curl attempts to reference a CA Bundle which doesn't exist in the location
@@ -37,7 +38,7 @@ SSL_CERT_FILE_ORIG=$SSL_CERT_FILE
 unset SSL_CERT_FILE
 
 curl https://curl.se/ca/cacert.pem > $HOME/.certs/ca-bundle.tmp
-cat $HOME/.certs/ca-bundle.tmp $HOME/.certs/ca.pem $HOME/.certs/cloud-ca.pem > $HOME/.certs/ca-bundle.crt
+cat $HOME/.certs/ca-bundle.tmp $HOME/.certs/ca.pem $HOME/.certs/cloud-ca.pem > $HOME/.certs/dev-cloud-ca.pem > $HOME/.certs/ca-bundle.crt
 rm $HOME/.certs/*.tmp
 
 export SSL_CERT_FILE=$SSL_CERT_FILE_ORIG
