@@ -31,7 +31,7 @@ writeSshConfig(){
     printf "\nEnter your BBC email address: "
     read EMAIL_ADDRESS
 
-    export COSMOS_SSH_USERNAME=$(curl --cert $HOME/.certs/dev.bbc.co.uk.pem --cacert $HOME/.certs/ca-bundle.crt https://api.live.bbc.co.uk/cosmos/user/$EMAIL_ADDRESS 2>/dev/null | jq '.username' --raw-output)
+    export COSMOS_SSH_USERNAME=$(curl --cert $HOME/.certs/dev.bbc.co.uk.pem --cacert $HOME/.certs/ca-bundle.crt  https://cosmos.api.bbci.co.uk/v1/users/$EMAIL_ADDRESS 2>/dev/null | jq '.username' --raw-output)
     sed -i -e "s#\${COSMOS_SSH_USERNAME}#$COSMOS_SSH_USERNAME#g" $HOME/.ssh/config
 }
 
