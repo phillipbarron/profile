@@ -14,9 +14,9 @@ if [ -f $P12_LOCATION ]; then
     mkdir -p $HOME/.certs
     echo "Found P12. It will ask you for your password if required"
     openssl pkcs12 -in $P12_LOCATION -out $HOME/.certs/dev.bbc.co.uk.pem -clcerts -nodes
-    openssl pkcs12 -export -in $HOME/.certs/dev.bbc.co.uk.pem -passout pass:dev.bbc.co.uk -out $HOME/.certs/dev.bbc.co.uk.p12 -name dev.bbc.co.uk
-    openssl pkcs12 -nocerts -nodes -passin pass:dev.bbc.co.uk -in $HOME/.certs/dev.bbc.co.uk.p12 -out $HOME/.certs/dev.bbc.co.uk.key
-    openssl pkcs12 -nokeys -clcerts -passin pass:dev.bbc.co.uk -in $HOME/.certs/dev.bbc.co.uk.p12 -out $HOME/.certs/dev.bbc.co.uk.crt
+    openssl pkcs12 -export -in $HOME/.certs/dev.bbc.co.uk.pem -passout pass:dev.bbc.co.uk -out $HOME/.certs/dev.bbc.co.uk.p12 -name dev.bbc.co.uk -legacy
+    openssl pkcs12 -nocerts -nodes -passin pass:dev.bbc.co.uk -in $HOME/.certs/dev.bbc.co.uk.p12 -out $HOME/.certs/dev.bbc.co.uk.key -legacy
+    openssl pkcs12 -nokeys -clcerts -passin pass:dev.bbc.co.uk -in $HOME/.certs/dev.bbc.co.uk.p12 -out $HOME/.certs/dev.bbc.co.uk.crt -legacy
     
     echo "Created the following certificates. The p12 password is dev.bbc.co.uk"
     ls -l $HOME/.certs
